@@ -1,10 +1,7 @@
 package edu.pingpong.quickstart;
 
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.print.attribute.standard.Media;
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -28,7 +25,6 @@ public class EspadaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Optional<Espada> getEspadaNombre(@PathParam("nombre")String nombre){
         return this.service.getEspadaNombre(nombre);
-
     }
 
     @GET
@@ -40,7 +36,7 @@ public class EspadaResource {
     @Path("/longitud/{longitud}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Optional<Espada> getEspadaLongitud(@PathParam("longitud")double longitud){
+    public Optional<Espada> getEspadaLongitud(@PathParam("longitud")String longitud){
         return this.service.getEspadaLongitud(longitud);
     }
     @Path("/{nombre}")

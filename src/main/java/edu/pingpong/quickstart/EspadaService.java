@@ -15,7 +15,7 @@ public class EspadaService {
         return Espada.find("nombre",nombre).firstResultOptional();
     }
 
-    public Optional<Espada> getEspadaLongitud(double longitud){
+    public Optional<Espada> getEspadaLongitud(String longitud){
         return Espada.find("longitud",longitud).firstResultOptional();
     }
 
