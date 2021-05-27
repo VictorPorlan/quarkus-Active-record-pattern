@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.testcontainers.containers.MariaDBContainer;
-
 import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
 import edu.pingpong.quickstart.MariaDbTestResource.Initializer;
