@@ -15,6 +15,16 @@ Acto seguido ejecuta este comando para iniciar la API en modo desarrollo en el p
 .\mvnw compile quarkus:dev
 ```
 
+Los casos tests están preparados para un despliegue automático en contenedores docker. Usa alguno de estos comandos para ejecutarlos todos o solo un modulo en especifico.
+```
+.\mvnw -Dtest="EspadaResourceTest" test
+```
+```
+.\mvnw -Dtest="EspadaServiceTest" test
+```
+```
+.\mvnw -test
+```
 Soy consciente de que el repo tenia tematica de frutas originalmente, pero como me estoy leyendo [Berserk](https://es.wikipedia.org/wiki/Berserk_(manga)),
 escrito por Kentaro Miura (DEP), y el prota es famoso por su caracteristica espada Dragonslayer 
 decidí usar esta temática.
