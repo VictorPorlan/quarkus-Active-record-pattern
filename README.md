@@ -23,7 +23,7 @@ Los casos tests están preparados para un despliegue automático en contenedores
 .\mvnw -Dtest="EspadaServiceTest" test
 ```
 ```
-.\mvnw -test
+.\mvnw test
 ```
 Soy consciente de que el repo tenia tematica de frutas originalmente, pero como me estoy leyendo [Berserk](https://es.wikipedia.org/wiki/Berserk_(manga)),
 escrito por Kentaro Miura (DEP), y el prota es famoso por su caracteristica espada Dragonslayer 
