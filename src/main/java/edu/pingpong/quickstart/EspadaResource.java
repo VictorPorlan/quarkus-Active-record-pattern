@@ -23,8 +23,11 @@ public class EspadaResource {
     @Path("/{nombre}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Optional<Espada> getEspadaNombre(@PathParam("nombre")String nombre){
-        return this.service.getEspadaNombre(nombre);
+    public Response getEspadaNombre(@PathParam("nombre")String nombre){
+        Optional<Espada> espada = this.service.getEspadaNombre(nombre);
+        return espada.isPresent()?
+                Response.status(Response.Status.OK).entity(espada.get()).build() :
+                Response.status(Response.Status.NOT_FOUND).build();
     }
 
     @GET
@@ -36,7 +39,7 @@ public class EspadaResource {
     @Path("/longitud/{longitud}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Optional<Espada> getEspadaLongitud(@PathParam("longitud")String longitud){
+    public Optional<Espada> getEspadaLongitud(@PathParam("longitud")Float longitud){
         return this.service.getEspadaLongitud(longitud);
     }
     @Path("/{nombre}")

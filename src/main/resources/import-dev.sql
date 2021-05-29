@@ -3,7 +3,7 @@ CREATE TABLE Espada
 (
     id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
     nombre VARCHAR (255) NOT NULL,
-    longitud DOUBLE(5,0),
+    longitud FLOAT NOT NULL ,
     PRIMARY KEY (id)
 );
 INSERT INTO Espada (id, nombre, longitud) VALUES (1000, 'Dragonslayer', 200.0);

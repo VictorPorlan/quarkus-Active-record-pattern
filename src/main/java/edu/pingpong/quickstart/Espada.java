@@ -4,15 +4,17 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Espada")
 public class Espada extends PanacheEntity {
     @Column
     public String nombre;
     @Column
-    public double longitud;
+    public Float longitud;
 
-    public Espada(String nombre, double longitud) {
+    public Espada(String nombre, Float longitud) {
         this.nombre = nombre;
         this.longitud = longitud;
     }
